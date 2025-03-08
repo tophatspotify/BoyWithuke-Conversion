@@ -1,0 +1,37 @@
+print("Hello! How are you doing?")
+
+def chatbot_response(user_input):
+    user_input = user_input.lower()
+
+    if user_input in ['good', 'great', 'awesome']:
+        return "That's great to hear!"
+    elif user_input in ['bad', 'not good', 'sad', 'not good', 'bad']:
+        return "I'm sorry, I hope you feel better(:"
+    elif user_input in ['what is your name', 'who are you']:
+        return "I am Tophat's help bot."
+    elif user_input in ['thanks', 'thank you']:
+        return "You're welcome!"
+    elif user_input == 'have a nice day':
+        return "You too!"
+    elif user_input == 'do you like boywithuke':
+        return "Yes, he's my favorite artist!"
+    elif user_input == 'whats your favorite song':
+        return "Stranger"
+    elif user_input == 'nice':
+        return "Bye"
+    elif user_input in ['bye', 'goodbye']:
+        return "Goodbye! Take care!"
+    else:
+        return "Sorry, I didn't understand that."
+
+# Example usage
+user_input = input("You: ")
+while user_input.lower() not in ['bye', 'goodbye']:
+    response = chatbot_response(user_input)
+    if response:
+        print(f"Bot: {response}")
+    else:
+        print("Bot: Sorry, I didn't understand that.")
+    user_input = input("You: ")
+
+print("Bot: Goodbye!")
